@@ -1,60 +1,101 @@
-# 🧪 Análisis A/B – Evaluación de Comportamiento de Usuarios
 
-## 📌 Objetivo del proyecto
-Evaluar el impacto de un experimento A/B sobre el comportamiento de los usuarios, comparando métricas clave entre grupos de control y prueba para determinar si existen diferencias estadísticamente significativas.
+🧪 Análisis A/B — Evaluación del Comportamiento de Usuarios
+🧩 Problema
 
----
+La empresa necesitaba evaluar si un cambio aplicado en la aplicación impactaba positivamente el comportamiento de los usuarios.
+Para ello, se diseñó un experimento A/B con distintos grupos de control y prueba.
 
-## 🛠️ Herramientas utilizadas
-- Python  
-- Pandas  
-- NumPy  
-- SciPy  
-- Matplotlib  
+🎯 Objetivo
 
-## 📂 Descripción del dataset
-El conjunto de datos contiene eventos generados por usuarios dentro de una aplicación, incluyendo:
+Analizar si el cambio implementado generó diferencias significativas en la interacción de los usuarios, comparando métricas clave entre los grupos de control y el grupo de prueba
 
-- `EventName`: nombre del evento  
-- `DeviceIDHash`: identificador único del usuario  
-- `EventTimestamp`: fecha y hora del evento  
-- `ExpId`: identificador del experimento  
+🧠 Enfoque del análisis
 
-### Grupos del experimento:
-- **Control:** 246 y 247  
-- **Test:** 248
+El análisis se centró en evaluar el comportamiento de los usuarios a partir de eventos registrados dentro de la aplicación.
 
-## 🧹 Limpieza de datos
-Se realizaron los siguientes pasos:
-- Conversión de fechas a formato datetime  
-- Verificación de valores nulos  
-- Eliminación de duplicados  
-- Validación de distribución de usuarios por grupo
+Las acciones realizadas fueron:
 
-## 📊 Análisis realizado
+Limpieza y preparación del conjunto de datos
 
-### 🔹 Distribución de usuarios por grupo
-Se validó que los grupos tuvieran tamaños comparables para asegurar un experimento equilibrado.
+Validación de la distribución de usuarios por grupo experimental
 
-### 🔹 Análisis de eventos
-Se analizó el número de eventos por usuario para evaluar el nivel de interacción.
+Análisis del comportamiento de los usuarios a través de eventos
 
-### 🔹 Comparación estadística
-Se utilizó la **prueba de Mann-Whitney U** para comparar el comportamiento entre grupos de control y prueba.
+Comparación estadística entre grupos mediante pruebas de hipótesis
 
-## 📉 Resultados
-- No se encontraron diferencias estadísticamente significativas entre los grupos.
-- El comportamiento de los usuarios fue consistente entre control y prueba.
-- El cambio evaluado no tuvo impacto medible en la interacción.
+🛠️ Herramientas utilizadas
 
-## ✅ Conclusiones
-- El experimento no mostró mejoras significativas.
-- Se recomienda no implementar el cambio evaluado.
-- Es necesario considerar nuevas hipótesis o métricas para futuras pruebas A/B.
+Python
+
+Pandas
+
+NumPy
+
+SciPy
+
+Matplotlib
+
+📂 Descripción del dataset
+
+El dataset contiene registros de eventos generados por los usuarios dentro de la aplicación:
+
+EventName: nombre del evento
+
+DeviceIDHash: identificador único del usuario
+
+EventTimestamp: fecha y hora del evento
+
+ExpId: identificador del experimento
+
+Grupos analizados:
+
+Control: 246 y 247
+
+Test: 248
+
+📊 Análisis realizado
+🔹 Distribución de usuarios
+
+Se validó que los grupos tuvieran tamaños comparables para asegurar la confiabilidad del experimento.
+
+🔹 Análisis de comportamiento
+
+Se analizó el número de eventos por usuario como indicador de nivel de interacción.
+
+🔹 Prueba estadística
+
+Se utilizó la prueba Mann–Whitney U para comparar los grupos de control frente al grupo de prueba.
+
+📉 Resultados clave
+
+No se identificaron diferencias estadísticamente significativas entre los grupos.
+
+El comportamiento de los usuarios se mantuvo consistente entre control y prueba.
+
+El cambio evaluado no generó mejoras medibles en la interacción.
+
+✅ Conclusiones
+
+El experimento no mostró impacto positivo en el comportamiento del usuario.
+
+No se recomienda implementar el cambio evaluado.
+
+Se sugiere explorar nuevas hipótesis o métricas para futuros experimentos A/B.
 
 
+💡 Impacto del análisis
 
+Este análisis permite:
 
+Evitar implementaciones sin impacto medible
+
+Optimizar decisiones basadas en datos reales
+
+Fortalecer la toma de decisiones basada en experimentación
+
+📎 Próximo paso recomendado
+
+Explorar nuevas variantes del experimento o analizar métricas adicionales que permitan detectar cambios más sutiles en el comportamiento del usuario.
 
 
 
